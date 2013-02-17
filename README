@@ -1,83 +1,53 @@
 /******************************************************************
 wpAndMore
-A Lightweight Wordpress Development Theme
+
+WordPress Theme for wpAndMore project. 
+
+Jump on http://wpandmore.info and have a chat with me, Andrea Barghigiani, about your passion for WordPress!
+
+I love hear from you! First and foremost because that will help me develop even more content for my website. 
+What? Did you not know that I am constantly creating guide and courses to let you learn more about WordPress!
+
+And second because I would love to know more about you. How and When you met WordPress, why you love it, how deep are your knowledge of this platform and, why not, interview you on a Skype call to let my audience know even more about you! 
+
+Why should you start to read my Blog? (Or even get in contact with me for that matter) 
+
+Because inside my site you'll find my knowledge of WordPress categorized in three family, just to let you choose what to know and when:
+
+	Use - the first family (the yoellow pencil) that you can choose to read from is the one that will teach you how to USE WordPress. How to start to use your fresh installation of this platform, learn how publish your articles, which plugins I advice you to use and even how to start your business with WordPress;
+	Dev - this is my favourite one, the orange pencile! As I met WordPress looking for something that will help me develop amazing website, this could be your family too. If you love use WordPress to build up your next project, if you enjoy create new plugins that will help thousand of people and making some money out of it in this family are collected courses and articles to let you discover WordPress even more deeply. Jump in to have some advanced WordPress training for free!
+	Help - the last family, the blue pencil, is the one that will show you how to find help; you can choose to contact me directly or look for answers on some of the WordPress comunities that I will link to.
+
+All sounds like lot's of fun, well, will be even more fun if I'll got the chance to meet you and know your story. 
+Anyway, I hope that you will enjoy my content and I desire even that you'll get something out from it! For that reason I'll give to you my own template!
+
+Since I developed it starting from the Bones Template, I will release it with the same licence of Eddie Machado, and you can do whathever you want with it.
+You can use as a starter theme for one of your project, you can learn how I use WordPress from my code or you can even create a better theme!
+
+The only thing that I would like you to do form me it's just speak about my project to your friends and colleagues, because you'll not only help me, but also all your contact will benefit from it; as long as they want to use WordPress :D   
+
 
 _______________________________________________________________
 HEADS UP!!!
 Bones & Bones (Responsive Edition) have been merged.
 _______________________________________________________________
 
-Bones is designed to make the life of developers easier. It's built
-using HTML5 & has a strong semantic foundation. It was updated recently
-using some of the HTML5 Boilerplate's recommended markup and setup.
-It's constantly growing so be sure to check back often if you are a
-frequent user. I'm always open to contribution. :)
-
-Designed by Eddie Machado
-http://themble.com/bones
+Designed by Andrea Barghigiani
+http://andreabarghigiani.info
 
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
 
-Special Thanks to:
-Paul Irish & the HTML5 Boilerplate
-Yoast for some WP functions & optimization ideas
-Andrew Rogers for code optimization
-David Dellanave for speed & code optimization
-and several other developers. :)
+Special Thanks to: Eddie Machado, creator of the Bones Theme (http://themble.com/bones/)
 
 Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
+https://github.com/Pr0v4/wpAndMore/issues
 
 To view Release & Update Notes, read the log.txt file inside
 the library folder.
 
 ******************************************************************/
 
-/* v1.25 update */
-- updated custom post type page for translation
-- added => to responsive jquery
-- cleaned up theme tags (which make NO sense, but are best practice, go figure)
-- updated html element to match hb5
-- fixed echo problem on admin.php
-- updated normalize (LESS also had some missing styles so I added them)
-- GetComputedStyle fix for IE (for responsive js)
-- cleaned up mixins (border radius)
-- added translations! (Chinese, Spanish)
-
-/* v1.2 HUGE update */
-- merge responsive version with classic
-- remove post title from read more link (it's way too long)
-- removed readme.txt (it was pointless)
-- organized info for each file called in on the functions page
-- added custom gravatar call in comments
-- i'm leaving jQuery to a plugin (that way I'm not providing dated jQuery)
-- added translation folder
-- put everything inside stuff so it's easier to be translated
-- added an identifier in each 404 area so you know what template is showing
-- remove custom walker. I think that's better left for you guys to do
-- fixed some spelling errors
-- added some translation options in the comments file
-- added role=navigation to footer links
-- deleted image.php (who really uses that anyway)
-- added sidebar to search.php
-- added class to custom post type title
-- added link to custom meta box
-- removed selectivizr
-- updated html elements with new classes for IE
-- added new mobile meta tags
-- removed pinned site meta tag for IE9
-- merged base.css into style.css for one less call in the header
-- added styleguide page and styles (oh yea!)
-- added nav class to both menus
-- removed "Powered by Wordpress & Bones" from footer, because let's face it: we all delete this anyway.
-- added button class to submit comment button
-- removed html5 placeholder fallback (you should be using Gravity Forms)
-- added slug and rewrite to custom post type for easier urls
-- renamed the border radius mixins so they were easer to remember
-- removed duplicate box shadow mixin
-- deleted the plugins.php file
-- facebook og:meta can be better handled by a plugin (or Yoast's SEO plugin)
-- rel=me can also be handled by SEO plugin or another plugin
-- removed author.php (you can use archive.php or add it yourself)
+/* v1 First Release */
+This is just the first step. Looking to hear from you about bugs o fixes!
