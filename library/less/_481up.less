@@ -1,0 +1,317 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+
+/* Da mostrare SOLO su 480 */
+.solo480{ display: none; visibility: hidden; }
+.no480{ display: block; visibility: visible; }
+
+/*********************
+HEADER STYLES
+*********************/
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {}
+
+	/* .menu is clearfixed inside mixins.scss */
+	.menu {
+		ul {
+			li {
+				a {
+					
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {
+					
+					}
+				}
+				
+				&:first-child {}
+				&:last-child {}
+				
+				/*
+				plan your menus and drop-downs wisely.
+				*/
+				ul.sub-menu,
+				ul.children {
+					li {
+						a {
+							&:hover,
+							&:focus {}
+							&:link {}
+						}
+						&:first-child {}
+						&:last-child {}
+					}
+				}
+			} /* end .menu ul li */
+			
+			/* highlight current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .menu ul */
+	} /* end .menu */
+
+
+/*********************
+FOOTER STYLES
+*********************/
+	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+			
+/*********************
+FRONTPAGE STYLES
+*********************/
+.home{
+	.blue-bar{
+		
+		#newsletter{
+			margin-left: 8%;
+			width: 55%;
+			position: relative;
+			
+			h2{
+				.transform( none );
+				font-size: 16px;
+				margin-top: 5px;
+			}
+			p{ 
+				font-size: .85em;
+				
+				strong{
+					font-size: 1em;
+				} 
+			}
+		}
+	}
+}
+
+/*********************
+SINGLE STYLES
+*********************/
+.single{
+
+	.post{
+		/* Inizio Personalizzazione in Base a Categorie */
+		&.category-usa{
+			#post-media{
+				background: url(../images/use-extra-sx.png) no-repeat left center, url(../images/use-extra-dx.png) no-repeat right -1px;
+				.link-video, .link-down, .link-corso{
+					background-color: #3d262a; 
+					text-shadow: 1px 1px 0 1px rgba( 0, 0, 0, .75 );
+					.border-radius(6px);
+					.boxShadow-inset( 1px, 1px, 3px, 2px, @color: rgba(0,0,0,.75) );
+				}
+				.link-video a{ background-position: 0 -185px; }
+				.link-down a{ background-position: 0 -214px; }
+				.link-corso a{ background-position: 0 -244px; }
+				p{ color: #3d262a; padding-left: 0; }
+				a{ color: #ffdc59; }
+				
+			}//fine #post-media
+			
+			#lista-lezioni{
+				background-color: #3d262a;
+				border: 1px solid #000;
+				color: #fff;
+				.boxShadow-inset( 0, 0, 3px, 2px, rgba(0, 0, 0, 0.75) );
+				
+				a{ color: #ffdc59; }
+				ol li:nth-child( odd ){ background-color: #523338; width: 110%; }
+			}//fine #lista-lezioni
+		}//fine .category-usa
+		
+		&.category-dev{
+			#post-media{
+				background: url(../images/dev-extra-sx.png) no-repeat left center, url(../images/dev-extra-dx.png) no-repeat right -3px;
+				.link-video, .link-down, .link-corso{
+					background-color: #f9d948;
+					text-shadow: 1px 1px 0 1px rgba( 0, 0, 0, .25 );
+					.border-radius(6px);
+					.boxShadow-inset( 1px, 1px, 3px, 2px, rgba( 170 , 85, 6,.95 ) );
+				}
+				p{ color: #f9d948; text-shadow: 1px 1px 0 1px rgba( 170 , 85, 6, .95 ); }
+				.link-video a{ background-position: 0 -5px; }
+				.link-down a{ background-position: 0 -34px; }
+				.link-corso a{ background-position: 0 -64px; }
+				a{ 	color: #aa5506; }
+				 
+			}//fine #post-media
+			
+			#lista-lezioni{
+				background-color: #F9D948;
+				border: 1px solid #AA5506;
+				.boxShadow-inset( 0, 0, 3px, 2px, rgba(170, 85, 6, 0.95) );
+				
+				a{ color: #AA5506; }
+				ol li:nth-child( odd ){ background-color: #fae069; width: 110%; }
+			}//fine #lista-lezioni
+		}//fine .category-dev
+		&.category-help{
+			#post-media{
+				background: url(../images/help-extra-sx.png) no-repeat left center, url(../images/help-extra-dx.png) no-repeat right center;
+				.link-video, .link-down, .link-corso{
+					background-color: #f9d948;
+					text-shadow: 1px 1px 0 1px rgba( 0, 0, 0, .25 );
+					.boxShadow-inset( 1px, 1px, 3px, 2px, rgba( 0 , 0, 0, .75 ) );
+					.border-radius(6px);
+				}
+				p{ color: #f9d948; text-shadow: 1px 1px 0 1px rgba( 0 , 0, 0, .75 ); }
+				.link-video a{ background-position: 0 -95px; }
+				.link-down a{ background-position: 0 -124px; }
+				.link-corso a{ background-position: 0 -154px; }
+				a{ 	color: #aa5506; }
+			}//fine #post-media
+			
+			#lista-lezioni{
+				background-color: #F9D948;
+				border: 1px solid #AA5506;
+				.boxShadow-inset( 0, 0, 3px, 2px, rgba(170, 85, 6, 0.95) );
+				
+				a{ color: #AA5506; }
+				ol li:nth-child( odd ){ background-color: #fae069; width: 110%; }
+			}//fine #lista-lezioni
+		}//fine .category-help		
+		/* Fine Personalizzazione in base a Categorie */
+		
+		#post-media{
+			height: 100px;
+			width: 60%;
+			min-width: 335px;
+			max-width: 420px;
+			.clearfix();
+			div{
+				float: left;
+				height: 31px;
+				width: 75px;
+				padding-right: 3px;
+				
+				position: relative;
+				&:first-child{ padding-left: 0; }
+				&.link-video, &.link-down, &.link-corso{ margin-top: 36px; width: 84px; margin-right: 4px; }
+				&.link-corso{ width: 87px; }
+				a{
+					display: inline-block;
+					background: url(../images/sprite-extra.png) no-repeat left center;
+					font-weight: bold;
+					height: 20px;
+					padding-left: 28px;
+					text-decoration: none;
+					position: absolute;
+					top: 4px;
+					left: 7px;
+					
+					&:hover{ text-decoration: underline; }
+				}
+			}
+			p{
+				float: left;
+				margin-top: 40px;
+				margin-left: 10px;
+				padding: 0;
+				font-family: 'Gloria Hallelujah', cursive;
+				font-weight: bold;
+			}
+			
+		}//fine #post-media
+		
+		/* Contenitori Extra */
+		#video{
+			text-align: center;
+			
+			iframe{
+				width: 90%;
+				margin: 5px auto;
+			}
+		}
+		#lista-lezioni{
+			display: none;
+			font-weight: bold;
+			text-align: center;
+			margin: 5px auto;
+			max-width: 430px;
+			.border-radius( 8px );
+			
+			h5, h6{
+				text-align: center;
+				font-size: 1.6em;
+				font-weight: bold;
+				letter-spacing: .05em;
+				line-height: 1.3em;
+				margin: 20px 10px 10px;
+				
+			}
+			h6{ font-size: 1.3em; margin: 5px auto; }
+			
+			ol{ 
+				list-style-type: decimal;
+				margin: 10px 50px 20px; 
+				text-align: left;
+				li{
+					font-size: .85em;
+					padding: 4px 6px;
+					
+					a{ 
+						text-decoration: none;
+						
+						&:hover{ text-decoration: underline; }
+					}
+				}
+			}
+		}
+		/* Fine Contenitori Extra */
+		header{ .clearfix(); }
+		.wp-caption{ 
+			border: 1px solid #999;
+			img{ border: 1px solid #bbb; }
+			p{ text-align: center; } 
+		}
+		/* at this larger size, we can start to align images */
+		.alignleft, img.alignleft { 
+			margin-right: 1.5em; 
+			display: inline; 
+			float: left; 
+		}
+		.alignright, img.alignright { 
+			margin-left: 1.5em; 
+			display: inline; 
+			float: right; 
+		}
+		.aligncenter, img.aligncenter { 
+			margin-right: auto; 
+			margin-left: auto; 
+			display: block; 
+			clear: both; 
+		}
+
+	}//fine .post
+}//fine .single

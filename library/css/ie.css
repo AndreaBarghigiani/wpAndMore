@@ -1,0 +1,1380 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so LESS can understand the variables.
+*/
+/* import mixins */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/* COLORI PER WPAndMore */
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+.alert-help {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+.alert-info {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+.alert-error {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+.alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/* .transform( effetto ); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0,0,4px,0,#444); */
+/* .boxShadow(none); */
+/* Inset Box Shadow */
+/*********************
+BUTTONS
+*********************/
+.button,
+.button:visited {
+  border: 1px solid #936514;
+  padding: 4px 12px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: .8em;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 10px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e3a333;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6ad49), to(#e3a333));
+  background-image: -webkit-linear-gradient(top, #e6ad49, #e3a333);
+  background-image: -moz-linear-gradient(top, #e6ad49, #e3a333);
+  background-image: -o-linear-gradient(top, #e6ad49, #e3a333);
+  background-image: linear-gradient(to bottom, #e6ad49, #e3a333);
+}
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus {
+  color: #ffffff;
+  border: 1px solid #593d0c;
+  background-color: #de981e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3a333), to(#de981e));
+  background-image: -webkit-linear-gradient(top, #e3a333, #de981e);
+  background-image: -moz-linear-gradient(top, #e3a333, #de981e);
+  background-image: -o-linear-gradient(top, #e3a333, #de981e);
+  background-image: linear-gradient(to bottom, #e3a333, #de981e);
+}
+.button:active,
+.button:visited:active {
+  background-color: #e6ad49;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3a333), to(#e6ad49));
+  background-image: -webkit-linear-gradient(top, #e3a333, #e6ad49);
+  background-image: -moz-linear-gradient(top, #e3a333, #e6ad49);
+  background-image: -o-linear-gradient(top, #e3a333, #e6ad49);
+  background-image: linear-gradient(to bottom, #e3a333, #e6ad49);
+}
+.blue-button,
+.blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  -webkit-box-shadow: inset 0 0 3px #59b3ec;
+  -moz-box-shadow: inset 0 0 3px #59b3ec;
+  box-shadow: inset 0 0 3px #59b3ec;
+}
+.blue-button:hover,
+.blue-button:visited:hover,
+.blue-button:focus,
+.blue-button:visited:focus {
+  border-color: #116396;
+  background-color: #1472ad;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+}
+.blue-button:active,
+.blue-button:visited:active {
+  background-color: #1990db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+  background-image: -o-linear-gradient(top, #1681c4, #1990db);
+  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+/* Animation */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+/* Da mostrare SOLO su 480 */
+.solo480 {
+  display: none;
+  visibility: hidden;
+}
+.no480 {
+  display: block;
+  visibility: visible;
+}
+/*********************
+HEADER STYLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+.menu {
+  /* end .menu ul */
+
+}
+.menu ul {
+  /* end .menu ul li */
+
+  /* highlight current page */
+
+  /* end current highlighters */
+
+}
+.menu ul li {
+  /*
+				plan your menus and drop-downs wisely.
+				*/
+
+}
+.menu ul li a {
+  /*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+
+}
+/* end .menu */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/*********************
+FRONTPAGE STYLES
+*********************/
+.home .blue-bar #newsletter {
+  margin-left: 8%;
+  width: 55%;
+  position: relative;
+}
+.home .blue-bar #newsletter h2 {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.home .blue-bar #newsletter p {
+  font-size: .85em;
+}
+.home .blue-bar #newsletter p strong {
+  font-size: 1em;
+}
+/*********************
+SINGLE STYLES
+*********************/
+.single .post {
+  /* Inizio Personalizzazione in Base a Categorie */
+
+  /* Fine Personalizzazione in base a Categorie */
+
+  /* Contenitori Extra */
+
+  /* Fine Contenitori Extra */
+
+  /* at this larger size, we can start to align images */
+
+}
+.single .post.category-usa #post-media {
+  background: url(../images/use-extra-sx.png) no-repeat left center, url(../images/use-extra-dx.png) no-repeat right -1px;
+}
+.single .post.category-usa #post-media .link-video,
+.single .post.category-usa #post-media .link-down,
+.single .post.category-usa #post-media .link-corso {
+  background-color: #3d262a;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+}
+.single .post.category-usa #post-media .link-video a {
+  background-position: 0 -185px;
+}
+.single .post.category-usa #post-media .link-down a {
+  background-position: 0 -214px;
+}
+.single .post.category-usa #post-media .link-corso a {
+  background-position: 0 -244px;
+}
+.single .post.category-usa #post-media p {
+  color: #3d262a;
+  padding-left: 0;
+}
+.single .post.category-usa #post-media a {
+  color: #ffdc59;
+}
+.single .post.category-usa #lista-lezioni {
+  background-color: #3d262a;
+  border: 1px solid #000;
+  color: #fff;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.75);
+}
+.single .post.category-usa #lista-lezioni a {
+  color: #ffdc59;
+}
+.single .post.category-usa #lista-lezioni ol li:nth-child( odd ) {
+  background-color: #523338;
+  width: 110%;
+}
+.single .post.category-dev #post-media {
+  background: url(../images/dev-extra-sx.png) no-repeat left center, url(../images/dev-extra-dx.png) no-repeat right -3px;
+}
+.single .post.category-dev #post-media .link-video,
+.single .post.category-dev #post-media .link-down,
+.single .post.category-dev #post-media .link-corso {
+  background-color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 1px 1px 3px 2px rgba(170, 85, 6, 0.95);
+  -moz-box-shadow: inset 1px 1px 3px 2px rgba(170, 85, 6, 0.95);
+  box-shadow: inset 1px 1px 3px 2px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-dev #post-media p {
+  color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-dev #post-media .link-video a {
+  background-position: 0 -5px;
+}
+.single .post.category-dev #post-media .link-down a {
+  background-position: 0 -34px;
+}
+.single .post.category-dev #post-media .link-corso a {
+  background-position: 0 -64px;
+}
+.single .post.category-dev #post-media a {
+  color: #aa5506;
+}
+.single .post.category-dev #lista-lezioni {
+  background-color: #F9D948;
+  border: 1px solid #AA5506;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  -moz-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-dev #lista-lezioni a {
+  color: #AA5506;
+}
+.single .post.category-dev #lista-lezioni ol li:nth-child( odd ) {
+  background-color: #fae069;
+  width: 110%;
+}
+.single .post.category-help #post-media {
+  background: url(../images/help-extra-sx.png) no-repeat left center, url(../images/help-extra-dx.png) no-repeat right center;
+}
+.single .post.category-help #post-media .link-video,
+.single .post.category-help #post-media .link-down,
+.single .post.category-help #post-media .link-corso {
+  background-color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.single .post.category-help #post-media p {
+  color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+}
+.single .post.category-help #post-media .link-video a {
+  background-position: 0 -95px;
+}
+.single .post.category-help #post-media .link-down a {
+  background-position: 0 -124px;
+}
+.single .post.category-help #post-media .link-corso a {
+  background-position: 0 -154px;
+}
+.single .post.category-help #post-media a {
+  color: #aa5506;
+}
+.single .post.category-help #lista-lezioni {
+  background-color: #F9D948;
+  border: 1px solid #AA5506;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  -moz-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-help #lista-lezioni a {
+  color: #AA5506;
+}
+.single .post.category-help #lista-lezioni ol li:nth-child( odd ) {
+  background-color: #fae069;
+  width: 110%;
+}
+.single .post #post-media {
+  height: 100px;
+  width: 60%;
+  min-width: 335px;
+  max-width: 420px;
+  zoom: 1;
+  *zoom: 1;
+}
+.single .post #post-media:before,
+.single .post #post-media:after {
+  content: "";
+  display: table;
+}
+.single .post #post-media:after {
+  clear: both;
+}
+.single .post #post-media:before,
+.single .post #post-media:after {
+  content: "";
+  display: table;
+}
+.single .post #post-media:after {
+  clear: both;
+}
+.single .post #post-media div {
+  float: left;
+  height: 31px;
+  width: 75px;
+  padding-right: 3px;
+  position: relative;
+}
+.single .post #post-media div:first-child {
+  padding-left: 0;
+}
+.single .post #post-media div.link-video,
+.single .post #post-media div.link-down,
+.single .post #post-media div.link-corso {
+  margin-top: 36px;
+  width: 84px;
+  margin-right: 4px;
+}
+.single .post #post-media div.link-corso {
+  width: 87px;
+}
+.single .post #post-media div a {
+  display: inline-block;
+  background: url(../images/sprite-extra.png) no-repeat left center;
+  font-weight: bold;
+  height: 20px;
+  padding-left: 28px;
+  text-decoration: none;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+}
+.single .post #post-media div a:hover {
+  text-decoration: underline;
+}
+.single .post #post-media p {
+  float: left;
+  margin-top: 40px;
+  margin-left: 10px;
+  padding: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: bold;
+}
+.single .post #video {
+  text-align: center;
+}
+.single .post #video iframe {
+  width: 90%;
+  margin: 5px auto;
+}
+.single .post #lista-lezioni {
+  display: none;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px auto;
+  max-width: 430px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.single .post #lista-lezioni h5,
+.single .post #lista-lezioni h6 {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: .05em;
+  line-height: 1.3em;
+  margin: 20px 10px 10px;
+}
+.single .post #lista-lezioni h6 {
+  font-size: 1.3em;
+  margin: 5px auto;
+}
+.single .post #lista-lezioni ol {
+  list-style-type: decimal;
+  margin: 10px 50px 20px;
+  text-align: left;
+}
+.single .post #lista-lezioni ol li {
+  font-size: .85em;
+  padding: 4px 6px;
+}
+.single .post #lista-lezioni ol li a {
+  text-decoration: none;
+}
+.single .post #lista-lezioni ol li a:hover {
+  text-decoration: underline;
+}
+.single .post header {
+  zoom: 1;
+  *zoom: 1;
+}
+.single .post header:before,
+.single .post header:after {
+  content: "";
+  display: table;
+}
+.single .post header:after {
+  clear: both;
+}
+.single .post header:before,
+.single .post header:after {
+  content: "";
+  display: table;
+}
+.single .post header:after {
+  clear: both;
+}
+.single .post .wp-caption {
+  border: 1px solid #999;
+}
+.single .post .wp-caption img {
+  border: 1px solid #bbb;
+}
+.single .post .wp-caption p {
+  text-align: center;
+}
+.single .post .alignleft,
+.single .post img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.single .post .alignright,
+.single .post img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.single .post .aligncenter,
+.single .post img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+/* import grid */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.less stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+
+
+.onecol() { 
+	width: 5.801104972%;  
+	position: relative;
+  	float: left;
+  	margin-left: 2.762430939%;
+}       /* 4.85%;  } /* grid_1  *
+.twocol    { width: 14.364640883%; }       /* 13.45%; } /* grid_2  *
+.threecol  { width: 22.928176794%; }       /* 22.05%; } /* grid_3  *
+.fourcol   { width: 31.491712705%; }       /* 30.75%; } /* grid_4  *
+.fivecol   { width: 40.055248616%; }       /* 39.45%; } /* grid_5  *
+.sixcol    { width: 48.618784527%; }       /* 48%;    } /* grid_6  *
+.sevencol  { width: 57.182320438000005%; } /* 56.75%; } /* grid_7  *
+.eightcol  { width: 65.74585634900001%; }  /* 65.4%;  } /* grid_8  *
+.ninecol   { width: 74.30939226%; }        /* 74.05%; } /* grid_9  *
+.tencol    { width: 82.87292817100001%; }  /* 82.7%;  } /* grid_10 *
+.elevencol { width: 91.436464082%; }       /* 91.35%; } /* grid_11 *
+.twelvecol { width: 99.999999993%; }       /* 100%;   } /* grid_12 *
+
+// layout & column defaults
+.twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+}
+
+.first {
+  margin-left: 0;
+}
+
+.last {
+  float: right;
+}
+*/
+.fluid-container {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+.solo768 {
+  display: none;
+  visibility: hidden;
+}
+.no768 {
+  display: block;
+  visibility: visible;
+}
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  max-width: 1140px;
+}
+/*********************
+HEADER SYTLES
+*********************/
+.header #inner-header {
+  background: url(../images/macchia.png) no-repeat;
+  background-position: 98% 0;
+}
+.header #inner-header h3 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 24px;
+}
+.header #logo {
+  float: left;
+  margin: 10px 10px 30px 0;
+}
+.header #logo a {
+  width: 248px;
+  height: 67px;
+}
+.header #motto {
+  margin-top: 1.4em;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.3em;
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+nav {
+  position: relative;
+}
+.nav {
+  /* end .menu ul li */
+
+  /* highlight current page */
+
+  /* end current highlighters */
+
+}
+.nav li {
+  float: left;
+  position: relative;
+  /*
+		plan your menus and drop-downs wisely.
+		*/
+
+  /* showing sub-menus */
+
+}
+.nav li a {
+  border-bottom: 0;
+  /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li:hover ul {
+  top: auto;
+  display: block;
+}
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+.widget {
+  padding: 0 10px;
+  margin: 1.2em 0;
+}
+.widget ul li {
+  margin-bottom: 0.75em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  /* deep nesting */
+
+}
+.widget ul li:hover {
+  margin-left: 10px;
+}
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links ul li {
+  /*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+
+}
+/* end .footer-links */
+/*********************
+NEWSLETTER STYLES
+*********************/
+.page-newsletter .blue-bar #newsletter p {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.page-newsletter #main article {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.page-newsletter #main article .entry-content p {
+  font-size: 16px;
+}
+.page-newsletter #main article .entry-content ul li {
+  font-size: 14px;
+}
+/*********************
+FRONTPAGE STYLES
+*********************/
+.home .blue-bar #matite {
+  width: 30%;
+}
+.home .blue-bar #matite #inner-matite #copre {
+  width: 95%;
+  min-width: 225px;
+}
+.home .blue-bar #matite #inner-matite ul {
+  margin-left: 75%;
+}
+.home .blue-bar #newsletter {
+  width: 50%;
+  margin-left: 18%;
+}
+.home .blue-bar #newsletter h2 {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+}
+.home #main {
+  width: 56.333333333333336%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.home #sidebar1,
+.home #sidebar-front {
+  width: 39.666666666666664%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+/*********************
+Pagine Personalizzate STYLES
+*********************/
+.category.category-usa #content,
+.category.category-dev #content,
+.page.category-help #content,
+.category.category-andmore #content {
+  zoom: 1;
+  *zoom: 1;
+}
+.category.category-usa #content:before,
+.category.category-dev #content:before,
+.page.category-help #content:before,
+.category.category-andmore #content:before,
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after {
+  clear: both;
+}
+.category.category-usa #content:before,
+.category.category-dev #content:before,
+.page.category-help #content:before,
+.category.category-andmore #content:before,
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after {
+  clear: both;
+}
+.category.category-usa #logo,
+.category.category-dev #logo,
+.page.category-help #logo,
+.category.category-andmore #logo {
+  height: 151px;
+  width: 248px;
+}
+.category.category-usa header nav,
+.category.category-dev header nav,
+.page.category-help header nav,
+.category.category-andmore header nav {
+  height: 0;
+  margin-bottom: 0;
+}
+.category.category-usa header nav #menu-principale,
+.category.category-dev header nav #menu-principale,
+.page.category-help header nav #menu-principale,
+.category.category-andmore header nav #menu-principale {
+  position: absolute;
+  top: -40px;
+  left: 70px;
+}
+.category.category-usa #main,
+.category.category-dev #main,
+.page.category-help #main,
+.category.category-andmore #main {
+  width: 64.66666666666667%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  zoom: 1;
+  *zoom: 1;
+}
+.category.category-usa #main:before,
+.category.category-dev #main:before,
+.page.category-help #main:before,
+.category.category-andmore #main:before,
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after {
+  clear: both;
+}
+.category.category-usa #main:before,
+.category.category-dev #main:before,
+.page.category-help #main:before,
+.category.category-andmore #main:before,
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after {
+  clear: both;
+}
+.category.category-usa .sidebar,
+.category.category-dev .sidebar,
+.page.category-help .sidebar,
+.category.category-andmore .sidebar {
+  width: 31.333333333333336%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.category-usa #logo {
+  background: url(../images/1040/logo-use.jpg);
+}
+.category-dev #logo {
+  background: url(../images/1040/logo-dev.jpg);
+}
+.category-help #logo {
+  background: url(../images/1040/logo-help.jpg);
+}
+/*********************
+SINGLE PAGE STYLES
+*********************/
+.single .post p {
+  padding: 0 50px;
+}
+/*********************
+PAGE HELP STYLES
+*********************/
+.page.category-help #main {
+  width: 64.66666666666667%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.page.category-help #sidebar-front {
+  width: 31.333333333333336%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.page.category-help #sidebar-front .community p,
+.page.category-help #sidebar-front .community h3 {
+  margin-left: 25%;
+}
+/*****************************
+20. Pagina Contatti
+******************************/
+.page-id-1967 .page {
+  height: 240px;
+  padding: 10px 10px 0;
+}
+.page-id-1967 .page p {
+  font-size: 100%;
+}
+/*****************************
+21. Pagina Pillole
+******************************/
+.category-pillole #main #lista-pillole {
+  zoom: 1;
+  *zoom: 1;
+}
+.category-pillole #main #lista-pillole:before,
+.category-pillole #main #lista-pillole:after {
+  content: "";
+  display: table;
+}
+.category-pillole #main #lista-pillole:after {
+  clear: both;
+}
+.category-pillole #main #lista-pillole:before,
+.category-pillole #main #lista-pillole:after {
+  content: "";
+  display: table;
+}
+.category-pillole #main #lista-pillole:after {
+  clear: both;
+}
+.category-pillole #main .single-video {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.category-pillole #main h2.post-format-video {
+  border: none;
+}
+.category-pillole #main .single-article #video {
+  display: block;
+}
+.category-pillole #main .single-article #video iframe {
+  width: 100%;
+}
+/*****************************
+22. Pagina Autore
+******************************/
+#articoli-scritti {
+  zoom: 1;
+  *zoom: 1;
+  position: relative;
+  max-width: 1100px;
+}
+#articoli-scritti:before,
+#articoli-scritti:after {
+  content: "";
+  display: table;
+}
+#articoli-scritti:after {
+  clear: both;
+}
+#articoli-scritti:before,
+#articoli-scritti:after {
+  content: "";
+  display: table;
+}
+#articoli-scritti:after {
+  clear: both;
+}
+.author #main .single-article {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  margin-top: 0;
+  zoom: 1;
+  *zoom: 1;
+}
+.author #main .single-article:before,
+.author #main .single-article:after {
+  content: "";
+  display: table;
+}
+.author #main .single-article:after {
+  clear: both;
+}
+.author #main .single-article:before,
+.author #main .single-article:after {
+  content: "";
+  display: table;
+}
+.author #main .single-article:after {
+  clear: both;
+}
+/*****************************
+23. Pagina Blog
+******************************/
+.page-id-1970 #main .post .article-content h2 {
+  margin-left: 0;
+}
+.tag #main {
+  width: 64.66666666666667%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  zoom: 1;
+  *zoom: 1;
+}
+.tag #main:before,
+.tag #main:after {
+  content: "";
+  display: table;
+}
+.tag #main:after {
+  clear: both;
+}
+.tag #main:before,
+.tag #main:after {
+  content: "";
+  display: table;
+}
+.tag #main:after {
+  clear: both;
+}
+.tag .sidebar {
+  width: 31.333333333333336%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+01. SINGLE STYLES
+
+******************************************************************/
+.blue-bar {
+  zoom: 1;
+  *zoom: 1;
+}
+.blue-bar #inner-blue {
+  zoom: 1;
+  *zoom: 1;
+  margin: 0 auto 0 0;
+  width: 98%;
+}
+.blue-bar #inner-blue:before,
+.blue-bar #inner-blue:after {
+  content: "";
+  display: table;
+}
+.blue-bar #inner-blue:after {
+  clear: both;
+}
+.blue-bar #inner-blue:before,
+.blue-bar #inner-blue:after {
+  content: "";
+  display: table;
+}
+.blue-bar #inner-blue:after {
+  clear: both;
+}
+.blue-bar:before,
+.blue-bar:after {
+  content: "";
+  display: table;
+}
+.blue-bar:after {
+  clear: both;
+}
+.blue-bar:before,
+.blue-bar:after {
+  content: "";
+  display: table;
+}
+.blue-bar:after {
+  clear: both;
+}
+.page-newsletter .blue-bar #video,
+.page-newsletter .blue-bar #newsletter {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.page-newsletter .blue-bar #newsletter p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.page-newsletter #inner-content #main,
+.page-newsletter #inner-content #sidebar-newsletter {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+/**************************/
+/*		  SINGLE STYLE      */
+/**************************/
+.single #main,
+.page-id-1970 #main {
+  width: 73%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  margin-left: 0;
+}
+.single #main article:first-child,
+.page-id-1970 #main article:first-child {
+  margin-top: 0;
+}
+.single #sidebar1,
+.page-id-1970 #sidebar1,
+.single #sidebar-front,
+.page-id-1970 #sidebar-front {
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.single #sidebar1 #box,
+.page-id-1970 #sidebar1 #box,
+.single #sidebar-front #box,
+.page-id-1970 #sidebar-front #box {
+  background-position: 300% center, -200% center;
+}
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

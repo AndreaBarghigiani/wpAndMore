@@ -1,0 +1,74 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+01. SINGLE STYLES
+
+******************************************************************/
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+.blue-bar{
+	
+	#inner-blue{
+		.clearfix();
+		margin: 0 auto 0 0;
+		width: 98%;
+	}
+	
+	.clearfix();
+}
+.page-newsletter{
+	
+	.blue-bar{
+		
+		#video, #newsletter{
+			.colonna(6);
+		}
+		
+		#newsletter{
+			
+			p{
+				margin-left: 20px;
+				margin-right: 20px;	
+			}
+			
+		}	
+	}//fine .blue-bar
+	
+	#inner-content{
+		
+		#main, #sidebar-newsletter{
+			.colonna(6);
+		}
+		
+		
+	}//fine #inner-content
+}
+/**************************/
+/*		  SINGLE STYLE      */
+/**************************/
+.single, .page-id-1970{
+	#main{ 
+		.colonna( 9 );
+		margin-left: 0;
+		article:first-child{ margin-top: 0; } 
+	}
+	#sidebar1, #sidebar-front{ 
+		.colonna( 3 );
+		
+		#box{
+			background-position: 300% center, -200% center;
+		} 
+	}
+	.post{
+		
+	}
+}

@@ -1,0 +1,521 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+.solo768{ display: none; visibility: hidden; }
+.no768{ display: block; visibility: visible; }
+
+.blue-bar{
+	
+}
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	max-width: 1140px;
+}
+
+/*********************
+HEADER SYTLES
+*********************/
+
+.header {
+	
+	#inner-header{
+		background: url(../images/macchia.png) no-repeat;
+		background-position: 98% 0;
+		
+		h3{
+			font-family: 'Gloria Hallelujah', cursive;
+			font-size: 24px;
+		}
+	}
+	
+	#logo {
+		float: left;
+		margin: 10px 10px 30px 0;
+		a{
+			width: 248px;
+			height: 67px;
+		}
+	}
+	
+	#motto{
+		margin-top: 1.4em;
+		font-family: 'Gloria Hallelujah', cursive;
+		font-size: 1.3em;
+	}
+	
+	
+}//fine header
+
+	
+
+/*********************
+NAVIGATION STYLES
+*********************/
+nav{ position: relative; }
+.nav {
+	
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				
+
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			width: 200px;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			display: none;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover ul {
+			top: auto;
+			display: block;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 1.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+				.transition();
+				
+				&:hover{ margin-left: 10px; }
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+/*********************
+NEWSLETTER STYLES
+*********************/
+.page-newsletter{
+	.blue-bar{
+		#newsletter{
+			p{ 
+				margin-left: 200px;
+				margin-right: 200px;
+			}
+		}
+	}
+	#main{
+		article{
+			margin-left: 30px;
+			margin-right: 30px;
+			.entry-content{			
+				p{
+					font-size: 16px;
+				}
+				ul li{ font-size: 14px; }
+			}
+		}
+	}//fine #main
+}
+
+/*********************
+FRONTPAGE STYLES
+*********************/
+.home{
+	.blue-bar{
+		
+		#matite{
+			width: 30%;
+			
+			#inner-matite{
+				#copre{
+					width: 95%;
+					min-width: 225px;
+				}	
+				ul{ margin-left: 75%; }
+			}
+			
+		}//fine #matite
+		
+		#newsletter{
+			width: 50%;
+			margin-left: 18%;
+			
+			h2{
+				.transform( none );
+			}
+		}//fine .newsletter
+		
+	}//fine .bluebar
+	
+	#main{
+		.colonna( 7 );
+	}//fine #main
+
+	#sidebar1, #sidebar-front{
+		.colonna( 5 );
+	}	
+}//fine .home
+
+/*********************
+Pagine Personalizzate STYLES
+*********************/
+.category.category-usa, .category.category-dev, .page.category-help, .category.category-andmore{
+	#content{ .clearfix(); }
+	#logo{
+		height: 151px;
+		width: 248px;
+	}
+	header{
+		nav{
+			height: 0;
+			margin-bottom: 0;
+			#menu-principale{ 
+				position: absolute; 
+				top: -40px;
+				left: 70px; 
+			}	
+		}	
+	}
+	
+	
+	#main{
+		.colonna( 8 );
+		.clearfix(); 
+	}
+	.sidebar{
+		.colonna( 4 );
+	}
+}
+
+.category-usa{ 
+	#logo{ background: url(../images/1040/logo-use.jpg); }
+}
+.category-dev{ 
+	#logo{ background: url(../images/1040/logo-dev.jpg); }
+}
+.category-help{ 
+	#logo{ background: url(../images/1040/logo-help.jpg); }
+}
+
+/*********************
+SINGLE PAGE STYLES
+*********************/
+.single{
+	
+	.post{
+		
+		p{ padding: 0 50px; }
+		#post-media{
+			
+		}
+	
+	}//fine .post
+}//fine .single
+
+/*********************
+PAGE HELP STYLES
+*********************/
+.page.category-help{
+	#main{ 
+		.colonna( 8 );
+	}
+	#sidebar-front{ 
+		.colonna( 4 );
+		
+		.community{
+			p,h3{ margin-left: 25%; }
+		} 
+	}
+}
+/*****************************
+20. Pagina Contatti
+******************************/
+.page-id-1967{
+	.page{
+		height: 240px;
+		padding: 10px 10px 0;
+		p{ font-size: 100%; }
+	}
+}
+
+/*****************************
+21. Pagina Pillole
+******************************/
+
+.category-pillole{
+	
+	#main{
+		
+		#lista-pillole{ .clearfix(); }
+		.single-video{ .colonna( 6 ); }
+		h2.post-format-video{ border: none; }
+		.single-article{
+			
+			
+			#video{ 
+				display: block;
+				
+				iframe{ width: 100%; } 
+			}
+		}
+	}
+}
+
+/*****************************
+22. Pagina Autore
+******************************/
+#articoli-scritti{ 
+	.clearfix(); 
+	position: relative;
+	max-width: 1100px; 
+}
+
+.author{
+	#main .single-article{ 
+		.colonna( 6 );
+		margin-top: 0;
+		.clearfix(); 
+	}
+	
+	
+}
+
+/*****************************
+23. Pagina Blog
+******************************/
+.page-id-1970{
+	#main .post .article-content{
+		h2{ margin-left: 0; }
+	}
+}
+
+.tag{
+	#main{
+		.colonna( 8 );
+		.clearfix(); 
+	}
+	.sidebar{
+		.colonna( 4 );
+	}
+}
