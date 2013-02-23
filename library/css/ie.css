@@ -259,6 +259,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1681c4, #1990db);
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
+/* Animation */
 /******************************************************************
 Site Name: 
 Author: 
@@ -284,6 +285,9 @@ upon your base.less styles.
   display: block;
   visibility: visible;
 }
+/*********************
+HEADER STYLES
+*********************/
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -315,34 +319,6 @@ NAVIGATION STYLES
 }
 /* end .menu */
 /*********************
-POSTS & CONTENT STYLES
-*********************/
-/* entry content */
-.entry-content {
-  /* at this larger size, we can start to align images */
-
-}
-.entry-content .alignleft,
-.entry-content img.alignleft {
-  margin-right: 1.5em;
-  display: inline;
-  float: left;
-}
-.entry-content .alignright,
-.entry-content img.alignright {
-  margin-left: 1.5em;
-  display: inline;
-  float: right;
-}
-.entry-content .aligncenter,
-.entry-content img.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  clear: both;
-}
-/* end .entry-content */
-/*********************
 FOOTER STYLES
 *********************/
 /*
@@ -367,7 +343,320 @@ FRONTPAGE STYLES
   margin-top: 5px;
 }
 .home .blue-bar #newsletter p {
-  font-size: 13px;
+  font-size: .85em;
+}
+.home .blue-bar #newsletter p strong {
+  font-size: 1em;
+}
+/*********************
+SINGLE STYLES
+*********************/
+.single .post {
+  /* Inizio Personalizzazione in Base a Categorie */
+
+  /* Fine Personalizzazione in base a Categorie */
+
+  /* Contenitori Extra */
+
+  /* Fine Contenitori Extra */
+
+  /* at this larger size, we can start to align images */
+
+}
+.single .post.category-usa #post-media {
+  background: url(../images/use-extra-sx.png) no-repeat left center, url(../images/use-extra-dx.png) no-repeat right -1px;
+}
+.single .post.category-usa #post-media .link-video,
+.single .post.category-usa #post-media .link-down,
+.single .post.category-usa #post-media .link-corso {
+  background-color: #3d262a;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+}
+.single .post.category-usa #post-media .link-video a {
+  background-position: 0 -185px;
+}
+.single .post.category-usa #post-media .link-down a {
+  background-position: 0 -214px;
+}
+.single .post.category-usa #post-media .link-corso a {
+  background-position: 0 -244px;
+}
+.single .post.category-usa #post-media p {
+  color: #3d262a;
+  padding-left: 0;
+}
+.single .post.category-usa #post-media a {
+  color: #ffdc59;
+}
+.single .post.category-usa #lista-lezioni {
+  background-color: #3d262a;
+  border: 1px solid #000;
+  color: #fff;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.75);
+}
+.single .post.category-usa #lista-lezioni a {
+  color: #ffdc59;
+}
+.single .post.category-usa #lista-lezioni ol li:nth-child( odd ) {
+  background-color: #523338;
+  width: 110%;
+}
+.single .post.category-dev #post-media {
+  background: url(../images/dev-extra-sx.png) no-repeat left center, url(../images/dev-extra-dx.png) no-repeat right -3px;
+}
+.single .post.category-dev #post-media .link-video,
+.single .post.category-dev #post-media .link-down,
+.single .post.category-dev #post-media .link-corso {
+  background-color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 1px 1px 3px 2px rgba(170, 85, 6, 0.95);
+  -moz-box-shadow: inset 1px 1px 3px 2px rgba(170, 85, 6, 0.95);
+  box-shadow: inset 1px 1px 3px 2px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-dev #post-media p {
+  color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-dev #post-media .link-video a {
+  background-position: 0 -5px;
+}
+.single .post.category-dev #post-media .link-down a {
+  background-position: 0 -34px;
+}
+.single .post.category-dev #post-media .link-corso a {
+  background-position: 0 -64px;
+}
+.single .post.category-dev #post-media a {
+  color: #aa5506;
+}
+.single .post.category-dev #lista-lezioni {
+  background-color: #F9D948;
+  border: 1px solid #AA5506;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  -moz-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-dev #lista-lezioni a {
+  color: #AA5506;
+}
+.single .post.category-dev #lista-lezioni ol li:nth-child( odd ) {
+  background-color: #fae069;
+  width: 110%;
+}
+.single .post.category-help #post-media {
+  background: url(../images/help-extra-sx.png) no-repeat left center, url(../images/help-extra-dx.png) no-repeat right center;
+}
+.single .post.category-help #post-media .link-video,
+.single .post.category-help #post-media .link-down,
+.single .post.category-help #post-media .link-corso {
+  background-color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.single .post.category-help #post-media p {
+  color: #f9d948;
+  text-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+}
+.single .post.category-help #post-media .link-video a {
+  background-position: 0 -95px;
+}
+.single .post.category-help #post-media .link-down a {
+  background-position: 0 -124px;
+}
+.single .post.category-help #post-media .link-corso a {
+  background-position: 0 -154px;
+}
+.single .post.category-help #post-media a {
+  color: #aa5506;
+}
+.single .post.category-help #lista-lezioni {
+  background-color: #F9D948;
+  border: 1px solid #AA5506;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  -moz-box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+  box-shadow: inset 0 0 3px 2px rgba(170, 85, 6, 0.95);
+}
+.single .post.category-help #lista-lezioni a {
+  color: #AA5506;
+}
+.single .post.category-help #lista-lezioni ol li:nth-child( odd ) {
+  background-color: #fae069;
+  width: 110%;
+}
+.single .post #post-media {
+  height: 100px;
+  width: 60%;
+  min-width: 335px;
+  max-width: 420px;
+  zoom: 1;
+  *zoom: 1;
+}
+.single .post #post-media:before,
+.single .post #post-media:after {
+  content: "";
+  display: table;
+}
+.single .post #post-media:after {
+  clear: both;
+}
+.single .post #post-media:before,
+.single .post #post-media:after {
+  content: "";
+  display: table;
+}
+.single .post #post-media:after {
+  clear: both;
+}
+.single .post #post-media div {
+  float: left;
+  height: 31px;
+  width: 75px;
+  padding-right: 3px;
+  position: relative;
+}
+.single .post #post-media div:first-child {
+  padding-left: 0;
+}
+.single .post #post-media div.link-video,
+.single .post #post-media div.link-down,
+.single .post #post-media div.link-corso {
+  margin-top: 36px;
+  width: 84px;
+  margin-right: 4px;
+}
+.single .post #post-media div.link-corso {
+  width: 87px;
+}
+.single .post #post-media div a {
+  display: inline-block;
+  background: url(../images/sprite-extra.png) no-repeat left center;
+  font-weight: bold;
+  height: 20px;
+  padding-left: 28px;
+  text-decoration: none;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+}
+.single .post #post-media div a:hover {
+  text-decoration: underline;
+}
+.single .post #post-media p {
+  float: left;
+  margin-top: 40px;
+  margin-left: 10px;
+  padding: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: bold;
+}
+.single .post #video {
+  text-align: center;
+}
+.single .post #video iframe {
+  width: 90%;
+  margin: 5px auto;
+}
+.single .post #lista-lezioni {
+  display: none;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px auto;
+  max-width: 430px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.single .post #lista-lezioni h5,
+.single .post #lista-lezioni h6 {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: .05em;
+  line-height: 1.3em;
+  margin: 20px 10px 10px;
+}
+.single .post #lista-lezioni h6 {
+  font-size: 1.3em;
+  margin: 5px auto;
+}
+.single .post #lista-lezioni ol {
+  list-style-type: decimal;
+  margin: 10px 50px 20px;
+  text-align: left;
+}
+.single .post #lista-lezioni ol li {
+  font-size: .85em;
+  padding: 4px 6px;
+}
+.single .post #lista-lezioni ol li a {
+  text-decoration: none;
+}
+.single .post #lista-lezioni ol li a:hover {
+  text-decoration: underline;
+}
+.single .post header {
+  zoom: 1;
+  *zoom: 1;
+}
+.single .post header:before,
+.single .post header:after {
+  content: "";
+  display: table;
+}
+.single .post header:after {
+  clear: both;
+}
+.single .post header:before,
+.single .post header:after {
+  content: "";
+  display: table;
+}
+.single .post header:after {
+  clear: both;
+}
+.single .post .wp-caption {
+  border: 1px solid #999;
+}
+.single .post .wp-caption img {
+  border: 1px solid #bbb;
+}
+.single .post .wp-caption p {
+  text-align: center;
+}
+.single .post .alignleft,
+.single .post img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.single .post .alignright,
+.single .post img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.single .post .aligncenter,
+.single .post img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
 }
 /* import grid */
 /******************************************************************
@@ -443,6 +732,10 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
+.solo768 {
+  display: none;
+  visibility: hidden;
+}
 .no768 {
   display: block;
   visibility: visible;
@@ -471,9 +764,21 @@ HEADER SYTLES
   float: left;
   margin: 10px 10px 30px 0;
 }
+.header #logo a {
+  width: 248px;
+  height: 67px;
+}
+.header #motto {
+  margin-top: 1.4em;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.3em;
+}
 /*********************
 NAVIGATION STYLES
 *********************/
+nav {
+  position: relative;
+}
 .nav {
   /* end .menu ul li */
 
@@ -499,10 +804,6 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 
-}
-.nav li a:hover,
-.nav li a:focus {
-  background-color: #dedede;
 }
 .nav li ul.sub-menu,
 .nav li ul.children {
@@ -550,12 +851,20 @@ SIDEBARS & ASIDES
 }
 .widget {
   padding: 0 10px;
-  margin: 2.2em 0;
+  margin: 1.2em 0;
 }
 .widget ul li {
   margin-bottom: 0.75em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   /* deep nesting */
 
+}
+.widget ul li:hover {
+  margin-left: 10px;
 }
 .widget ul li ul {
   margin-top: 0.75em;
@@ -614,7 +923,7 @@ FRONTPAGE STYLES
 }
 .home .blue-bar #matite #inner-matite #copre {
   width: 95%;
-  min-width: 250px;
+  min-width: 225px;
 }
 .home .blue-bar #matite #inner-matite ul {
   margin-left: 75%;
@@ -636,8 +945,367 @@ FRONTPAGE STYLES
   position: relative;
   float: left;
 }
-.home #sidebar1 {
+.home #sidebar1,
+.home #sidebar-front {
   width: 39.666666666666664%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+/*********************
+Pagine Personalizzate STYLES
+*********************/
+.category.category-usa #content,
+.category.category-dev #content,
+.page.category-help #content,
+.category.category-andmore #content,
+.single-post.category-usa #content,
+.single-post.category-dev #content,
+.single-post.category-andmore #content {
+  zoom: 1;
+  *zoom: 1;
+}
+.category.category-usa #content:before,
+.category.category-dev #content:before,
+.page.category-help #content:before,
+.category.category-andmore #content:before,
+.single-post.category-usa #content:before,
+.single-post.category-dev #content:before,
+.single-post.category-andmore #content:before,
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after,
+.single-post.category-usa #content:after,
+.single-post.category-dev #content:after,
+.single-post.category-andmore #content:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after,
+.single-post.category-usa #content:after,
+.single-post.category-dev #content:after,
+.single-post.category-andmore #content:after {
+  clear: both;
+}
+.category.category-usa #content:before,
+.category.category-dev #content:before,
+.page.category-help #content:before,
+.category.category-andmore #content:before,
+.single-post.category-usa #content:before,
+.single-post.category-dev #content:before,
+.single-post.category-andmore #content:before,
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after,
+.single-post.category-usa #content:after,
+.single-post.category-dev #content:after,
+.single-post.category-andmore #content:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #content:after,
+.category.category-dev #content:after,
+.page.category-help #content:after,
+.category.category-andmore #content:after,
+.single-post.category-usa #content:after,
+.single-post.category-dev #content:after,
+.single-post.category-andmore #content:after {
+  clear: both;
+}
+.category.category-usa #logo,
+.category.category-dev #logo,
+.page.category-help #logo,
+.category.category-andmore #logo,
+.single-post.category-usa #logo,
+.single-post.category-dev #logo,
+.single-post.category-andmore #logo {
+  height: 151px;
+  width: 248px;
+}
+.category.category-usa header nav,
+.category.category-dev header nav,
+.page.category-help header nav,
+.category.category-andmore header nav,
+.single-post.category-usa header nav,
+.single-post.category-dev header nav,
+.single-post.category-andmore header nav {
+  height: 0;
+  margin-bottom: 0;
+}
+.category.category-usa header nav #menu-principale,
+.category.category-dev header nav #menu-principale,
+.page.category-help header nav #menu-principale,
+.category.category-andmore header nav #menu-principale,
+.single-post.category-usa header nav #menu-principale,
+.single-post.category-dev header nav #menu-principale,
+.single-post.category-andmore header nav #menu-principale {
+  position: absolute;
+  top: -40px;
+  left: 70px;
+}
+.category.category-usa #main,
+.category.category-dev #main,
+.page.category-help #main,
+.category.category-andmore #main,
+.single-post.category-usa #main,
+.single-post.category-dev #main,
+.single-post.category-andmore #main {
+  width: 64.66666666666667%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  zoom: 1;
+  *zoom: 1;
+}
+.category.category-usa #main:before,
+.category.category-dev #main:before,
+.page.category-help #main:before,
+.category.category-andmore #main:before,
+.single-post.category-usa #main:before,
+.single-post.category-dev #main:before,
+.single-post.category-andmore #main:before,
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after,
+.single-post.category-usa #main:after,
+.single-post.category-dev #main:after,
+.single-post.category-andmore #main:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after,
+.single-post.category-usa #main:after,
+.single-post.category-dev #main:after,
+.single-post.category-andmore #main:after {
+  clear: both;
+}
+.category.category-usa #main:before,
+.category.category-dev #main:before,
+.page.category-help #main:before,
+.category.category-andmore #main:before,
+.single-post.category-usa #main:before,
+.single-post.category-dev #main:before,
+.single-post.category-andmore #main:before,
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after,
+.single-post.category-usa #main:after,
+.single-post.category-dev #main:after,
+.single-post.category-andmore #main:after {
+  content: "";
+  display: table;
+}
+.category.category-usa #main:after,
+.category.category-dev #main:after,
+.page.category-help #main:after,
+.category.category-andmore #main:after,
+.single-post.category-usa #main:after,
+.single-post.category-dev #main:after,
+.single-post.category-andmore #main:after {
+  clear: both;
+}
+.category.category-usa .sidebar,
+.category.category-dev .sidebar,
+.page.category-help .sidebar,
+.category.category-andmore .sidebar,
+.single-post.category-usa .sidebar,
+.single-post.category-dev .sidebar,
+.single-post.category-andmore .sidebar,
+.category.category-usa #sidebar1,
+.category.category-dev #sidebar1,
+.page.category-help #sidebar1,
+.category.category-andmore #sidebar1,
+.single-post.category-usa #sidebar1,
+.single-post.category-dev #sidebar1,
+.single-post.category-andmore #sidebar1 {
+  width: 31.333333333333336%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.category-usa #logo {
+  background: url(../images/1040/logo-use.jpg);
+}
+.category-dev #logo {
+  background: url(../images/1040/logo-dev.jpg);
+}
+.category-help #logo {
+  background: url(../images/1040/logo-help.jpg);
+}
+/*********************
+SINGLE PAGE STYLES
+*********************/
+.single .post p {
+  padding: 0 50px;
+}
+/*********************
+PAGE HELP STYLES
+*********************/
+.page.category-help #main {
+  width: 64.66666666666667%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.page.category-help #sidebar-front {
+  width: 31.333333333333336%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.page.category-help #sidebar-front .community p,
+.page.category-help #sidebar-front .community h3 {
+  margin-left: 25%;
+}
+/*****************************
+20. Pagina Contatti
+******************************/
+.page-id-1967 .page {
+  height: 240px;
+  padding: 10px 10px 0;
+}
+.page-id-1967 .page p {
+  font-size: 100%;
+}
+/*****************************
+21. Pagina Pillole
+******************************/
+.category-pillole #main #lista-pillole {
+  zoom: 1;
+  *zoom: 1;
+}
+.category-pillole #main #lista-pillole:before,
+.category-pillole #main #lista-pillole:after {
+  content: "";
+  display: table;
+}
+.category-pillole #main #lista-pillole:after {
+  clear: both;
+}
+.category-pillole #main #lista-pillole:before,
+.category-pillole #main #lista-pillole:after {
+  content: "";
+  display: table;
+}
+.category-pillole #main #lista-pillole:after {
+  clear: both;
+}
+.category-pillole #main .single-video {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.category-pillole #main h2.post-format-video {
+  border: none;
+}
+.category-pillole #main .single-article #video {
+  display: block;
+}
+.category-pillole #main .single-article #video iframe {
+  width: 100%;
+}
+/*****************************
+22. Pagina Autore
+******************************/
+#articoli-scritti {
+  zoom: 1;
+  *zoom: 1;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#articoli-scritti:before,
+#articoli-scritti:after {
+  content: "";
+  display: table;
+}
+#articoli-scritti:after {
+  clear: both;
+}
+#articoli-scritti:before,
+#articoli-scritti:after {
+  content: "";
+  display: table;
+}
+#articoli-scritti:after {
+  clear: both;
+}
+.author #main .single-article {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  margin-top: 0;
+  zoom: 1;
+  *zoom: 1;
+}
+.author #main .single-article:before,
+.author #main .single-article:after {
+  content: "";
+  display: table;
+}
+.author #main .single-article:after {
+  clear: both;
+}
+.author #main .single-article:before,
+.author #main .single-article:after {
+  content: "";
+  display: table;
+}
+.author #main .single-article:after {
+  clear: both;
+}
+/*****************************
+23. Pagina Blog
+******************************/
+.page-id-1970 #main .post .article-content h2 {
+  margin-left: 0;
+}
+.tag #main {
+  width: 64.66666666666667%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  zoom: 1;
+  *zoom: 1;
+}
+.tag #main:before,
+.tag #main:after {
+  content: "";
+  display: table;
+}
+.tag #main:after {
+  clear: both;
+}
+.tag #main:before,
+.tag #main:after {
+  content: "";
+  display: table;
+}
+.tag #main:after {
+  clear: both;
+}
+.tag .sidebar {
+  width: 31.333333333333336%;
   margin-left: 1%;
   margin-right: 1%;
   position: relative;
@@ -651,6 +1319,8 @@ Stylesheet: Desktop Stylsheet
 
 This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
+
+01. SINGLE STYLES
 
 ******************************************************************/
 .blue-bar {
@@ -714,6 +1384,38 @@ be seen on the Desktop.
   margin-right: 1%;
   position: relative;
   float: left;
+}
+/**************************/
+/*		  SINGLE STYLE      */
+/**************************/
+.single #main,
+.page-id-1970 #main {
+  width: 73%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+  margin-left: 0;
+}
+.single #main article:first-child,
+.page-id-1970 #main article:first-child {
+  margin-top: 0;
+}
+.single #sidebar1,
+.page-id-1970 #sidebar1,
+.single #sidebar-front,
+.page-id-1970 #sidebar-front {
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  float: left;
+}
+.single #sidebar1 #box,
+.page-id-1970 #sidebar1 #box,
+.single #sidebar-front #box,
+.page-id-1970 #sidebar-front #box {
+  background-position: 300% center, -200% center;
 }
 /* 
 you can call the larger styles if you want, but there's really no need 

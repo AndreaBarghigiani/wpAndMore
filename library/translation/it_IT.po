@@ -19,8 +19,7 @@ msgstr ""
 #: comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
-"Questo articolo &egrave; protetto da password. Inseriscila per vedere i "
-"commenti."
+"Questo articolo é protetto da password. Inseriscila per vedere i commenti."
 
 #: comments.php:23
 msgid "Response"
@@ -48,7 +47,7 @@ msgstr "I commenti sono chiusi."
 
 #: comments.php:70
 msgid "Leave a Reply"
-msgstr "Vuoi Lasciare un Tuo Pensiero?"
+msgstr "Vuoi Lasciare il Tuo Pensiero?"
 
 #: comments.php:70
 #, php-format

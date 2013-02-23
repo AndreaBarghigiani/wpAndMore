@@ -43,7 +43,7 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
 4. library/translation/translation.php
     - adding support for other languages
 */
-//require_once('library/translation/translation.php'); // this comes turned off by default
+require_once('library/translation/translation.php'); // this comes turned off by default
  
 /*
 4. library/wpam_meta_boxes.php
@@ -51,6 +51,12 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
     - aggiungo meta box primo paragrafo
 */
 require_once('library/wpam_meta_boxes.php');
+
+/*
+5. library/wpam_shortcodes.php
+    - info è un semplice box informativo da inserire dentro gli articoli
+*/
+require_once('library/wpam_shortcodes.php');
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 

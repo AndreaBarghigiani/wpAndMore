@@ -74,11 +74,16 @@ body {
 	background: url(../images/bg.png) repeat;  
 }
 
-.article-content{
+.article-content, .single-article{
 	div.primo{
-		font-size: 1.15em;
+		font-size: 1.20em;
 		font-weight: 500;
+		margin: 10px 35px;
+		text-align: justify;
 		
+		p{
+			padding: 0; 
+		}
 		em{
 			font-weight: 500;
 		}
@@ -415,6 +420,26 @@ nav{
 			.border-radius( 8px );
 			padding: 10px 10px 0;
 			
+			.box-info{
+				background-color: #FDF5D9;
+				border: 1px solid #FCEEC1;
+				margin: 10px;
+				padding: 15px 10px 15px 50px;
+				position: relative;
+				.border-radius( 4px );
+				
+				&::before{
+					content: "Info";
+					color: #FAE5A1;
+					font-size: 25px;
+					font-weight: bold;
+					position: absolute;
+					top: 3px;
+					left: 3px;
+					.transform( rotate(-45deg) );
+				}
+			}
+			
 			p{ padding: 0 15px; }
 			
 			#video{ display: none; }
@@ -573,15 +598,20 @@ nav{
 
 		.wp-caption {
 			background: #eee;
-			padding: 5px;
-
+			padding: 10px;
+			margin-bottom: 1em;
+		   margin-left: 0;
+		   max-width: 98%;
+		   text-align: center;
+		   
 			/* images inside wp-caption */
 			img {
-				margin-bottom: 0;
-				width: 100%;
+				display: block;
+   				margin: 0 auto;
 			}
 
-			p.wp-caption-text {
+			p {
+				position: relative;
 				font-size: 0.85em;
 				margin: 4px 0 7px;
 				text-align: center;
@@ -1457,6 +1487,8 @@ a.more-link{
 		.post{
 			h2, h3, h4, h5, h6{ margin-left: 80px; }
 			#social-and-news{ h3{ margin-left: 0; } }
+			p{ line-height: 160%; }
+			.article-content div.primo{ margin: 10px 20px; }
 			div.sharedaddy{
 				font-size: 100%;
 				

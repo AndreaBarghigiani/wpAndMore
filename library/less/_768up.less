@@ -380,7 +380,8 @@ FRONTPAGE STYLES
 /*********************
 Pagine Personalizzate STYLES
 *********************/
-.category.category-usa, .category.category-dev, .page.category-help, .category.category-andmore{
+.category.category-usa, .category.category-dev, .page.category-help, .category.category-andmore,
+.single-post.category-usa, .single-post.category-dev, .single-post.category-andmore{
 	#content{ .clearfix(); }
 	#logo{
 		height: 151px;
@@ -403,7 +404,8 @@ Pagine Personalizzate STYLES
 		.colonna( 8 );
 		.clearfix(); 
 	}
-	.sidebar{
+	.sidebar, #sidebar1{
+		
 		.colonna( 4 );
 	}
 }
@@ -489,6 +491,7 @@ PAGE HELP STYLES
 	.clearfix(); 
 	position: relative;
 	max-width: 1100px; 
+	margin: 0 auto;
 }
 
 .author{
