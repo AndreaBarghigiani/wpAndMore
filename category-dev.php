@@ -14,7 +14,7 @@
 							
 							<?php get_template_part( 'modulo', 'newsletter' ); ?>
 						</section>
-						<div id="condividi"><?php echo sharing_display(); ?></div>
+						<div id="condividi"></div>
 						<h2>Articoli</h2>
 					  
 					   	<div id="articoli-scritti">

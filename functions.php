@@ -63,7 +63,7 @@ require_once('library/wpam_shortcodes.php');
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-add_image_size( 'wpam-thumb', 480, 0, true);
+add_image_size( 'wpam-thumb', 700, 0, true);
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you
@@ -147,7 +147,7 @@ function bones_comments($comment, $args, $depth) {
 			    	// create variable
 			    	$bgauthemail = get_comment_author_email();
 			    ?>
-			    <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+			    <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" />
 			    <!-- end custom gravatar call -->
 				<?php printf(__('<cite class="fn">%s</cite>', 'bonestheme'), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__('j F, Y', 'bonestheme')); ?> </a></time>

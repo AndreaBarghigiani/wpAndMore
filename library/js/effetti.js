@@ -17,7 +17,16 @@ jQuery(document).ready(function($){
 	},function( e ){
 		e.preventDefault();
 		$( '#video').slideUp(1500);
-	})
+	});
+	
+	$( '#post-media .link-presentazione a' ).toggle( function( e ){
+		e.preventDefault();
+		console.log('cliccato');
+		$( '#presentazione').slideDown(1500);
+	},function( e ){
+		e.preventDefault();
+		$( '#presentazione').slideUp(1500);
+	});
 	/* Fine Effetto Corso */
 	
 });

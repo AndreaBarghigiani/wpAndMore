@@ -125,7 +125,7 @@ SINGLE STYLES
 		&.category-usa{
 			#post-media{
 				background: url(../images/use-extra-sx.png) no-repeat left center, url(../images/use-extra-dx.png) no-repeat right -1px;
-				.link-video, .link-down, .link-corso{
+				.link-video, .link-down, .link-corso, .link-presentazione{
 					background-color: #3d262a; 
 					text-shadow: 1px 1px 0 1px rgba( 0, 0, 0, .75 );
 					.border-radius(6px);
@@ -134,6 +134,7 @@ SINGLE STYLES
 				.link-video a{ background-position: 0 -185px; }
 				.link-down a{ background-position: 0 -214px; }
 				.link-corso a{ background-position: 0 -244px; }
+				.link-presentazione a{ background-position: 0 -244px; }
 				p{ color: #3d262a; padding-left: 0; }
 				a{ color: #ffdc59; }
 				
@@ -153,7 +154,7 @@ SINGLE STYLES
 		&.category-dev{
 			#post-media{
 				background: url(../images/dev-extra-sx.png) no-repeat left center, url(../images/dev-extra-dx.png) no-repeat right -3px;
-				.link-video, .link-down, .link-corso{
+				.link-video, .link-down, .link-corso, .link-presentazione{
 					background-color: #f9d948;
 					text-shadow: 1px 1px 0 1px rgba( 0, 0, 0, .25 );
 					.border-radius(6px);
@@ -163,6 +164,7 @@ SINGLE STYLES
 				.link-video a{ background-position: 0 -5px; }
 				.link-down a{ background-position: 0 -34px; }
 				.link-corso a{ background-position: 0 -64px; }
+				.link-presentazione a{ background-position: 0 -64px; }
 				a{ 	color: #aa5506; }
 				 
 			}//fine #post-media
@@ -179,7 +181,7 @@ SINGLE STYLES
 		&.category-help{
 			#post-media{
 				background: url(../images/help-extra-sx.png) no-repeat left center, url(../images/help-extra-dx.png) no-repeat right center;
-				.link-video, .link-down, .link-corso{
+				.link-video, .link-down, .link-corso, .link-presentazione{
 					background-color: #f9d948;
 					text-shadow: 1px 1px 0 1px rgba( 0, 0, 0, .25 );
 					.boxShadow-inset( 1px, 1px, 3px, 2px, rgba( 0 , 0, 0, .75 ) );
@@ -189,6 +191,7 @@ SINGLE STYLES
 				.link-video a{ background-position: 0 -95px; }
 				.link-down a{ background-position: 0 -124px; }
 				.link-corso a{ background-position: 0 -154px; }
+				.link-presentazione a{ background-position: 0 -154px; }
 				a{ 	color: #aa5506; }
 			}//fine #post-media
 			
@@ -217,7 +220,7 @@ SINGLE STYLES
 				
 				position: relative;
 				&:first-child{ padding-left: 0; }
-				&.link-video, &.link-down, &.link-corso{ margin-top: 36px; width: 84px; margin-right: 4px; }
+				&.link-video, &.link-down, &.link-corso, &.link-presentazione{ margin-top: 36px; width: 84px; margin-right: 4px; }
 				&.link-corso{ width: 87px; }
 				a{
 					display: inline-block;
@@ -245,7 +248,7 @@ SINGLE STYLES
 		}//fine #post-media
 		
 		/* Contenitori Extra */
-		#video{
+		#video, #presentazione{
 			text-align: center;
 			
 			iframe{

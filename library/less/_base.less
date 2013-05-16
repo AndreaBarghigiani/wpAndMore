@@ -31,6 +31,9 @@ and will be used across all viewports.
 18. Modifiche Matite
 19. Single Article in comune
 20. Pagina Contatti
+24. Ads Settings
+25. Series Settings
+26. UpCloo Settings
 ******************************************************************/
 
 /*********************
@@ -440,9 +443,49 @@ nav{
 				}
 			}
 			
+			.alert{
+				background-color: #ffb1aa;
+				border: 1px solid #fe8278;
+				margin: 10px;
+				padding: 15px 10px 15px 50px;
+				position: relative;
+				.border-radius( 4px );
+				
+				&::before{
+					content: "Alert";
+					color: #fe9188;
+					font-size: 23px;
+					font-weight: bold;
+					position: absolute;
+					top: 7px;
+					left: 0px;
+					.transform( rotate(-45deg) );
+				}
+			}
+			
+			.try{
+				background-color: #c3e2a7;
+				border: 1px solid #86c54d;
+				margin: 10px;
+				padding: 15px 10px 15px 50px;
+				position: relative;
+				.border-radius( 4px );
+				
+				&::before{
+					content: "Try";
+					color: #86c54d;
+					font-size: 23px;
+					font-weight: bold;
+					position: absolute;
+					top: 7px;
+					left: 6px;
+					.transform( rotate(-45deg) );
+				}
+			}
+			
 			p{ padding: 0 15px; }
 			
-			#video{ display: none; }
+			#video, #presentazione{ display: none; }
 			footer{
 				#social-and-news{
 					
@@ -568,6 +611,7 @@ nav{
 				margin: 0 0 1.5em 0;
 				max-width: 100%;
 				height: auto;
+				.boxShadow( 0, 2px, 4px, 0, #afafaf );
 			}
 
 			/*
@@ -576,11 +620,13 @@ nav{
 			and floating images at the next breakpoint,
 			but it's up to you. Feel free to change it up.
 			*/
-			.alignleft, img.alignleft {}
+			.alignleft, img.alignleft { float: left; margin: 10px 20px 10px 0; }
 			.alignright, img.alignright {}
 			.aligncenter, img.aligncenter, div.aligncenter {
+				margin-top: 1.5em;
 				margin-left: auto;
 				margin-right: auto;
+				margin-bottom: 1.5em;
 			}
 
 			video, object {
@@ -613,7 +659,8 @@ nav{
 			p {
 				position: relative;
 				font-size: 0.85em;
-				margin: 4px 0 7px;
+				margin: 7px 0 0;
+				padding: 0 6px;
 				text-align: center;
 			}
 
@@ -1402,7 +1449,7 @@ nav{
 	}//fine .blue-bar
 	
 	#main{
-		
+		.article-content div.primo{ margin: 10px 20px; }
 		h2{
 			font-weight: bold;
 			text-align: center;
@@ -1410,7 +1457,7 @@ nav{
 			
 			&.post-format-video{ border: none; }
 		}
-		#video{ 
+		#video, #presentazione{ 
 			display: block;
 			
 			iframe{ width: 100%; } 
@@ -1488,7 +1535,7 @@ a.more-link{
 			h2, h3, h4, h5, h6{ margin-left: 80px; }
 			#social-and-news{ h3{ margin-left: 0; } }
 			p{ line-height: 160%; }
-			.article-content div.primo{ margin: 10px 20px; }
+			
 			div.sharedaddy{
 				font-size: 100%;
 				
@@ -1658,7 +1705,7 @@ a.more-link{
 		margin-top: .1em;
 	}
 	
-	#thumb-link {
+	#thumb-link, .thumb-link {
 	    display: inline-block;
 	    margin: 0 auto;
 	    text-align: center;
@@ -1666,7 +1713,7 @@ a.more-link{
 	}
 	.attachment-wpam-thumb{
 		width: 100%;
-		max-width: 690px; 
+		max-width: 715px; 
 		height: auto;
 	}
 	.article-content{
@@ -1816,6 +1863,7 @@ a.more-link{
 22. Pagina Help Fix Community
 ******************************/
 .category-help{
+	&.single-post #main .post h2{ margin-left: 80px; }
 	#main .post h2{ margin-left: 0; }
 	.community{
 		width: 75%;
@@ -1931,4 +1979,52 @@ a.more-link{
 *************************************/
 .single #main .post #series-navigation{
 	h5{ margin-left: 0; }
+}
+
+/************************************
+24. Ads Settings
+*************************************/
+.ads{
+	
+	&.size728x90{
+		width: 100%;
+		height: 90px;
+	}
+	
+	&.size468x60{
+		height: 60px;
+		margin: 10px auto;
+	}
+}
+
+/************************************
+25. Series Settings
+*************************************/
+.tax-series{
+	#main{
+		
+		.addthis_toolbox{
+			text-align: center;
+			margin: 10px auto 20px;
+			padding-left: 33%;
+		}
+		
+		.single-article{
+			&:first-child{ margin-top: 20px; }
+		} 
+	}
+}
+
+/************************************
+26. UpCloo Settings
+*************************************/
+section div.upcloo-widget{
+	margin: 10px auto !important;
+	
+	.upcloo-header{
+		font-size: 14px !important;
+		font-weight: bold !important;
+		text-align: center !important;
+		margin: 4px auto !important;
+	}
 }

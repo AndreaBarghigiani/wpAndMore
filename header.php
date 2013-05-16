@@ -28,6 +28,19 @@
 		<!-- end of wordpress head -->
 			
 		<!-- drop Google Analytics Here -->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-2175460-19']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
 		<!-- end analytics -->
 		
 	</head>
@@ -40,13 +53,14 @@
 			$cat_body = 'category-usa';
 		} elseif ( is_category('dev') || in_category('dev') ) {
 			$cat_body = 'category-dev';
-		} elseif ( is_category('help') || in_category('help') || is_page( 1963 ) ){
+		} elseif ( is_category('help-cat') || in_category('help-cat') || is_page( 1963 ) ){
 			$cat_body = 'category-help';
 		}
+		
 	?>
 	
 	<body <?php body_class( $cat_body ); ?>>
-	
+		
 		<div id="container">
 			
 			<header class="header" role="banner">

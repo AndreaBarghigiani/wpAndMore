@@ -367,7 +367,9 @@ FRONTPAGE STYLES
 		}//fine .newsletter
 		
 	}//fine .bluebar
-	
+	.header{
+		#logo{ width: 248px; }
+	}
 	#main{
 		.colonna( 7 );
 	}//fine #main
@@ -380,8 +382,7 @@ FRONTPAGE STYLES
 /*********************
 Pagine Personalizzate STYLES
 *********************/
-.category.category-usa, .category.category-dev, .page.category-help, .category.category-andmore,
-.single-post.category-usa, .single-post.category-dev, .single-post.category-andmore{
+.category.category-usa, .category.category-dev, .page.category-help, .category.category-andmore, .tax-series{
 	#content{ .clearfix(); }
 	#logo{
 		height: 151px;
@@ -424,9 +425,8 @@ Pagine Personalizzate STYLES
 SINGLE PAGE STYLES
 *********************/
 .single{
-	
 	.post{
-		
+		.addthis_toolbox{ padding-left: 50px; }
 		p{ padding: 0 50px; }
 		#post-media{
 			
@@ -434,7 +434,23 @@ SINGLE PAGE STYLES
 	
 	}//fine .post
 }//fine .single
-
+.single-post.category-usa, .single-post.category-dev, .single-post.category-andmore, .single-post.category-help{
+	#logo{
+		height: 151px;
+		width: 248px;
+	}
+	header{
+		nav{
+			height: 0;
+			margin-bottom: 0;
+			#menu-principale{ 
+				position: absolute; 
+				top: -40px;
+				left: 70px; 
+			}	
+		}	
+	}
+}
 /*********************
 PAGE HELP STYLES
 *********************/
@@ -521,4 +537,28 @@ PAGE HELP STYLES
 	.sidebar{
 		.colonna( 4 );
 	}
+}
+
+/*****************************
+24. Pagina Serie
+******************************/
+.tax-series{
+	#main{
+		.colonna( 9 );
+	}
+	#sidebar1{ 
+		.colonna( 3 );
+		
+		#box{
+			background-position: 240% center, -140% center;
+		} 
+	}
+	
+}
+/*****************************
+25. Pagina Risultati Ricerca
+******************************/
+.page-id-936{
+	#main{ .colonna( 9 ); }
+	#sidebar1{ .colonna( 3 ); }
 }
